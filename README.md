@@ -40,7 +40,7 @@ Transport layers need to:
 
 - Extend from EventEmitter and emit the event
 - Implement the ```replicate``` method 
-```
+```javascript
  replicate(actionMsg) {
     //Send the message to the network
  }
@@ -48,9 +48,9 @@ Transport layers need to:
 
 actionMsg is created by the middleware and has the following shape
 
-```
+```json
 {
-    id: string //uuid id of the current action
+    id: string, //uuid id of the current action
     action: object // the redux action e.g {type:'SOME_ACTION',...}
 }
 ```
