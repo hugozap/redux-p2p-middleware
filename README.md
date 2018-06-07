@@ -30,9 +30,9 @@ const store = createStore(myRootReducer, applyMiddleware(replicator))
 
 Everytime one of the actions in the 'actionsToReplicate' array gets dispatched it will be passed to the transport layer to replicate to the other peers. When a peer receives the action it will be dispatched to the peer store.
 
-# What applications can benefit of this approach?
+# Replicating the actions vs replicating the state
 
-This approach replicates the actions instead of the actual store. It makes sense for some realtime apps (but not for all). Depending on the replication strategy it's possible for some actions to arrive in different order. This won't matter for a realtime drawing app but may be problematic for other kind of apps. 
+Some applications benefit from the replication of actions where each peer receives actions and dispatches those to its own store. Because some replication techniques do not guarantee message order, some actions could arrive in different order. This doesn't matter if you are creating a realtime social network feed but may be important in other scenarios.
 
 # Create a custom transport layer
 
