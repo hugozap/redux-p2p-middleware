@@ -1,0 +1,42 @@
+{
+  "name": "redux-action-replicator-middleware",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url":
+      "git+https://github.com/hugozap/redux-action-replicator-middleware.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url":
+      "https://github.com/hugozap/redux-action-replicator-middleware/issues"
+  },
+  "homepage":
+    "https://github.com/hugozap/redux-action-replicator-middleware#readme",
+  "dependencies": {
+    "events": "^3.0.0",
+    "uuid": "^3.2.1"
+  },
+  "peerDependencies": {
+    "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "redux": "^4.0.0",
+    "jest": "^23.1.0",
+    "webpack": "^4.10.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "webpack-cli": "^2.1.4",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
