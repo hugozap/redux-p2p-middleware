@@ -63,15 +63,44 @@ describe('tests', ()=>{
 			payload: 'hello world'
 		})
 
+		store.dispatch({
+			type:'ACTION2'
+		})
+
 		expect(action1called).toBe(true);
 
 	})
 
-	// it('Do not dispatch actions received not authorized', ()=>{
+	it('Do not dispatch actions received not authorized', ()=>{
+		let action1called = false
+		let action2called = false
+		let reducer = (state, action)=>{
+			switch(action.type) {
+				case 'ACTION1':
+					action1called = true;
+					break;
+				case 'ACTION2':
+					action2called = true;
+			}
+			return state
+		}
+		let transport = new TestTransport();
+		let allowedActions = ['ACTION1'];
+		let replicator = replicateActions(allowedActions, transport)
+		let store = createStore(reducer, applyMiddleware(replicator))
 
-	// })
+		//simulate receiving the action
+		//it should be dispatched locally
+		transport.simulateReceiveAction('abc', {
+			type: 'ACTION1',
+			payload: 'hello world'
+		})
 
-	// it('Do not re dispatch replicated local actions', ()=>{
+		transport.simulateReceiveAction('abc', {
+			type: 'ACTION2', //not authorized
+			payload: 'hello world'
+		})
 
-	// })
+		expect(action2called).toBe(false);
+	 })
 })
