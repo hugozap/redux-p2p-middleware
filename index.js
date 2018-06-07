@@ -36,3 +36,4 @@ export default function replicateActions(allowedActions, transport) {
         };
     };
 }
+

@@ -2,10 +2,13 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-	entry: ['./src/index.js'],
+	mode:'production',
+	entry: ['./index.js'],
 	output: {
 		path: path.resolve(__dirname, 'build'),
-		filename: 'main.bundle.js'
+		filename: 'main.bundle.js',
+		library: "ReduxActionReplicatorMiddleware",
+  		libraryTarget: "umd"
 	},
 	module: {
 		rules: [
