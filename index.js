@@ -17,7 +17,6 @@ export default function replicateActions(allowedActions, transport) {
 
     return store => {
         storeRef = store;
-        console.log('hola amigos')
         return next => {
             return action => {
                 if (allowedActions.indexOf(action.type) >= 0) {
