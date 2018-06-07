@@ -1,6 +1,6 @@
 {
   "name": "redux-action-replicator-middleware",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Abstract middleware to add replication capabilities to redux stores.",
   "main": "./build/main.bundle.js",
   "scripts": {
