@@ -1,7 +1,7 @@
 {
   "name": "redux-action-replicator-middleware",
-  "version": "1.0.3",
-  "description": "",
+  "version": "1.0.4",
+  "description": "Abstract middleware to add replication capabilities to redux stores.",
   "main": "./build/main.bundle.js",
   "scripts": {
     "test": "jest",
@@ -12,9 +12,12 @@
     "type": "git",
     "url": "git+https://github.com/hugozap/redux-action-replicator-middleware.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "redux",
+    "p2p"
+  ],
+  "author": "Hugo Zapata",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hugozap/redux-action-replicator-middleware/issues"
   },
