@@ -38,29 +38,25 @@ Some applications benefit from the replication of actions where each peer receiv
 
 Transport layers need to:
 
-- Extend from EventEmitter and emit the event
 - Implement the ```replicate``` method 
+
 ```javascript
  replicate(actionMsg) {
     //Send the message to the network
  }
 ```
 
-actionMsg is created by the middleware and has the following shape
+- Extend from EventEmitter and emit the ```action``` event whenever a new item gets retrieved from the network.
 
-```json
+
+**actionMsg** is an object with the following shape
+
+```
 {
-    id: string, //uuid id of the current action
+    id: string, //uuid id of the current action (auto generated)
     action: object // the redux action e.g {type:'SOME_ACTION',...}
 }
 ```
-
-The transport layer should serialize and send the message to the network.
-
-- Emit the 'action' event when a new item arrives from the network. The event parameter should be the actionMsg with the same structure described previously.
-
-
-
 
 
 
