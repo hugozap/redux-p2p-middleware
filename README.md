@@ -1,4 +1,4 @@
-# redux-action-replicator-middleware
+# redux-p2p-middleware
 
 This middleware makes it possible to replicate
 a subset of redux actions across peers.
@@ -14,13 +14,13 @@ replication.
 # Install
 
 ```
-yarn add redux-action-replicator-middleware
+yarn add redux-p2p-middleware
 ```
 
 # Usage
 
 ```javascript
-import replicateActions from 'redux-action-replicator-middleware'
+import replicateActions from 'redux-p2p-middleware'
 import MyTransportLayer from 'some-transport-layer'
 
 ...
