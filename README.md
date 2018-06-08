@@ -11,6 +11,11 @@ replication.
 
 **This library is BYOT (Bring your own transport) which means you need to use it with a transport implementation, or create your own(see instructions at the end of this file)**
 
+# Install
+
+```
+yarn add redux-action-replicator-middleware
+```
 
 # Usage
 
