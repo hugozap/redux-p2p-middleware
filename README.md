@@ -35,6 +35,14 @@ const store = createStore(myRootReducer, applyMiddleware(replicator))
 
 Everytime one of the actions in the 'actionsToReplicate' array gets dispatched it will be passed to the transport layer to replicate to the other peers. When a peer receives the action it will be dispatched to the peer store.
 
+
+# List of available transports
+
+- [ ] [GunDB Transport](https://github.com/hugozap/redux-p2p-gundb-transport)
+- [ ] WebRTC (TODO)
+- [ ] DAT (TODO)
+
+
 # Replicating the actions vs replicating the state
 
 Some applications benefit from the replication of actions where each peer receives actions and dispatches those to its own store. Because some replication techniques do not guarantee message order, some actions could arrive in different order. This doesn't matter if you are creating a realtime social network feed but may be important in other scenarios.
