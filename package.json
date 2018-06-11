@@ -1,6 +1,6 @@
 {
   "name": "redux-p2p-middleware",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Add p2p replication to your redux stores",
   "main": "./build/main.bundle.js",
   "scripts": {
