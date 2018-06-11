@@ -8,7 +8,7 @@ export default function replicateActions(allowedActions, transport) {
     transport.on('action', actionMsg => {
 
         //Only process non local actions
-        if(!locallyDispatched.indexOf(actionMsg.id) >= 0) {
+        if(locallyDispatched.indexOf(actionMsg.id) <  0) {
             if(allowedActions.indexOf(actionMsg.action.type) >= 0) {
                 //Store the replication id so we can check
                 //in the middleware and don't replicate it again
