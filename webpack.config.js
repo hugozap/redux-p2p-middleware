@@ -36,6 +36,7 @@ var nodeTarget = {
 		path: path.resolve(__dirname, 'build'),
 		filename: 'node.js',
 		library: "reduxp2p",
+		libraryTarget: "commonjs2"
 	},
 	module: {
 		rules: [
