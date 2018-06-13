@@ -11,13 +11,13 @@ replication.
 
 **This library is BYOT (Bring your own transport) which means you need to use it with a transport implementation, or create your own(see instructions at the end of this file)**
 
-# Install
+## Install
 
 ```
 yarn add redux-p2p-middleware
 ```
 
-# Usage
+## Usage
 
 ```javascript
 import replicateActions from 'redux-p2p-middleware'
@@ -31,16 +31,20 @@ const store = createStore(myRootReducer, applyMiddleware(replicator))
 
 ```
 
-# What will happen
+## What will happen
 
 Everytime one of the actions in the 'actionsToReplicate' array gets dispatched it will be passed to the transport layer to replicate to the other peers. When a peer receives the action it will be dispatched to the peer store.
 
 
-# List of available transports
+## List of available transports
 
 - [x] [GunDB Transport](https://github.com/hugozap/redux-p2p-gundb-transport)
 - [ ] WebRTC (TODO)
 - [ ] DAT (TODO)
+
+## Examples
+
+- [Simple p2p chat with Node](https://github.com/hugozap/redux-p2p-node-terminal-example/)
 
 
 # Replicating the actions vs replicating the state
