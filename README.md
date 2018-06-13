@@ -38,7 +38,7 @@ Everytime one of the actions in the 'actionsToReplicate' array gets dispatched i
 
 # List of available transports
 
-- [ ] [GunDB Transport](https://github.com/hugozap/redux-p2p-gundb-transport)
+- [x] [GunDB Transport](https://github.com/hugozap/redux-p2p-gundb-transport)
 - [ ] WebRTC (TODO)
 - [ ] DAT (TODO)
 
